@@ -6,7 +6,7 @@ import streamlit as st
 from sklearn.feature_extraction.text import TfidfVectorizer
 import google.generativeai as genai
 
-api_key = "YOUR_GOOGLE_API_KEY_HERE"
+api_key = "AIzaSyAY3zR0AP9l7T7klLMQj2xEUsp_JZApi0E"
 
 if not api_key:
     st.error("❌ GOOGLE_API_KEY is missing. Please provide your API key.")
