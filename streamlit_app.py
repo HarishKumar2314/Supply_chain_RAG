@@ -4,15 +4,15 @@ import faiss
 import pandas as pd
 import streamlit as st
 from sklearn.feature_extraction.text import TfidfVectorizer
-from dotenv import load_dotenv
 import google.generativeai as genai
 
-load_dotenv()
-api_key = os.getenv("GOOGLE_API_KEY")
+api_key = "YOUR_GOOGLE_API_KEY_HERE"
+
 if not api_key:
-    st.error("❌ GOOGLE_API_KEY not found in .env file. Please add it to your .env.")
+    st.error("❌ GOOGLE_API_KEY is missing. Please provide your API key.")
 else:
     genai.configure(api_key=api_key)
+    st.success("✅ API key configured successfully!")
 
 # === File paths for index persistence ===
 INDEX_FILE = "indices/faiss.index"
